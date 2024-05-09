@@ -1,0 +1,9 @@
+<input type="name" placeholder="type here" name="id" [(ngModel)]="testForm.name" #id="ngModel" required>
+<br>
+<br>
+<h3>{{testForm.name}}</h3>
+<p>Valid: {{ id.valid }}</p>
+
+<div *ngFor="let specialDeal of specialDeals">
+  <input #amount type="checkbox" value="{{specialDeal.amount}}" (click)="checked(amount)">{{specialDeal.amount}}
+</div>
